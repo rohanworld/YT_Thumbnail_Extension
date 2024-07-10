@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Thumbnail Downloader",
+    "author": "Rohan",
+    "version": "1.0",
+    "description": "Download YouTube video thumbnails in HD.",
+    "permissions": [
+      "contextMenus",
+      "downloads",
+      "activeTab"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "48": "icon.png"
+    }
+  }
+  
